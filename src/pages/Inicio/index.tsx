@@ -1,9 +1,9 @@
 import React from 'react';
 import cardapio from '../../data/cardapio.json';
-import styles from './inicio.module.scss';
+import styles from './Inicio.module.scss';
 
 export default function Inicio() {
-  let pratosRecomendados = [...cardapio]
+  let pratosRecomendados = [...cardapio];
   pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0, 3);
   return <section>
     <h3 className={styles.titulo}>
@@ -24,5 +24,5 @@ export default function Inicio() {
         </div>
       ))}
     </div>
-  </section>
+  </section>;
 }
