@@ -1,22 +1,25 @@
 import Inicio from 'pages/Inicio';
 import Cardapio from 'pages/Cardapio';
+import Footer from 'components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from 'components/Menu';
-import styles from './Routes.module.scss';
+import PaginaPadrao from 'components/PaginaPadrao';
+import Sobre from 'pages/Sobre';
+import NotFound from 'pages/NotFound';
 
 export default function AppRouter() {
   return <main>
     <Router>
       <Menu />
-      <header className={styles.header}>
-        <div className={styles.header__text}>
-          A casa do código e da massa
-        </div>
-      </header>
       <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/cardapio" element={<Cardapio />} />
+        <Route path='/' element={<PaginaPadrao />}>
+          <Route index element={<Inicio />} />
+          <Route path='cardapio' element={<Cardapio />} />
+          <Route path='sobre' element={<Sobre />} />
+        </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
-  </main>;
+  </main >;
 }
