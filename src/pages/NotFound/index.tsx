@@ -9,6 +9,11 @@ export default function NotFound() {
       [styles.container]: true,
       [stylesTema.container]: true
     })}>
+      <div className={styles.voltar}>
+        <button>
+          {'< Voltar'}
+        </button>
+      </div>
       <NotFoundImage />
     </div >
   );

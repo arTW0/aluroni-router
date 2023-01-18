@@ -8,7 +8,7 @@ import Sobre from 'pages/Sobre';
 import NotFound from 'pages/NotFound';
 
 export default function AppRouter() {
-  return <main>
+  return <main className='container'>
     <Router>
       <Menu />
       <Routes>
