@@ -6,6 +6,7 @@ import Menu from 'components/Menu';
 import PaginaPadrao from 'components/PaginaPadrao';
 import Sobre from 'pages/Sobre';
 import NotFound from 'pages/NotFound';
+import Prato from 'pages/Prato';
 
 export default function AppRouter() {
   return <main className='container'>
@@ -18,6 +19,7 @@ export default function AppRouter() {
           <Route path='sobre' element={<Sobre />} />
         </Route>
         <Route path='*' element={<NotFound />} />
+        <Route path='prato/:id' element={<Prato />} />
       </Routes>
       <Footer />
     </Router>
